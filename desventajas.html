@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Desventajas de las Redes Sociales</title>
+  <style>
+    /* ====== ESTILOS GENERALES ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ====== ENCABEZADO ====== */
+    header {
+      background: linear-gradient(90deg, #1a73e8, #0a58ca);
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header .logo h1 {
+      font-size: 1.8em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #ff4d4d;
+      color: #fff;
+    }
+
+    /* Botón de modo oscuro */
+    .dark-btn {
+      background: #ff4d4d;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    .dark-btn:hover {
+      background: #333;
+      color: #ff4d4d;
+    }
+
+    /* ====== HERO ====== */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to right, #fdecea, #f4f6f9);
+      border-bottom: 2px solid #ddd;
+    }
+
+    .hero h2 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+      color: #d93025;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    /* ====== TARJETAS ====== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 10px 18px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      color: #d93025;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      text-align: justify;
+    }
+
+    /* ====== BOTÓN REGRESAR ====== */
+    .btn-back {
+      display: inline-block;
+      margin: 30px auto;
+      text-decoration: none;
+      padding: 12px 25px;
+      background: #d93025;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .btn-back:hover {
+      background: #b71c1c;
+    }
+
+    /* ====== PIE DE PÁGINA ====== */
+    footer {
+      background: #1a73e8;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* ====== MODO OSCURO ====== */
+    body.dark {
+      background-color: #121212;
+      color: #eaeaea;
+    }
+
+    body.dark header {
+      background: #222;
+    }
+
+    body.dark .hero {
+      background: #1c1c1c;
+    }
+
+    body.dark footer {
+      background: #222;
+    }
+
+    body.dark .card {
+      background: #1e1e1e;
+      color: #eaeaea;
+    }
+
+    body.dark .card img {
+      filter: brightness(0.8);
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <h1>📱 Redes Sociales</h1>
+      <p>Desventajas</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="(3)index.html">Inicio</a></li>
+        <li><a href="ventajas.html">Ventajas</a></li>
+        <li><a href="desventajas.html" class="active">Desventajas</a></li>
+      </ul>
+    </nav>
+    <button class="dark-btn" onclick="toggleDarkMode()">🌙 Modo oscuro</button>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="hero">
+      <h2>Desventajas de las Redes Sociales</h2>
+      <p>
+        Aunque las redes sociales tienen un gran impacto positivo, también presentan
+        riesgos y efectos negativos que afectan tanto a nivel personal como social.
+      </p>
+    </section>
+
+    <!-- Sección de Desventajas -->
+    <section class="cards">
+      <div class="card">
+        <img src="https://www.ivanesalud.com/wp-content/uploads/2017/12/30-adiccion-rrss-blog.jpg" alt="Adicción a las redes sociales">
+        <div class="card-content">
+          <h3>⏳ Adicción</h3>
+          <p>El uso excesivo puede generar dependencia y pérdida de tiempo productivo.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://blog.axontraining.com/wp-content/uploads/2023/12/comparacion-social-axon-training.jpg" alt="Comparación social">
+        <div class="card-content">
+          <h3>😔 Comparación Social</h3>
+          <p>Las publicaciones idealizadas generan baja autoestima y ansiedad en muchas personas.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTweXa7yG7NlHVBYh_-S24gO4-cLrwL3KrIhMWVVOfBcxHJ5xSBf8eORmew2NdyYjicO-M&usqp=CAU" alt="Ciberacoso">
+        <div class="card-content">
+          <h3>⚠️ Ciberacoso</h3>
+          <p>Las plataformas pueden ser usadas para hostigamiento, bullying y difusión de odio.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://media.licdn.com/dms/image/v2/D5612AQFAVcJ9JWmL-A/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1686852830865?e=2147483647&v=beta&t=7Oj9M5xkToCoBR-B5v_8gAAejpR4z24KsVl3WrbeBtk" alt="Privacidad">
+        <div class="card-content">
+          <h3>🔒 Pérdida de Privacidad</h3>
+          <p>Los datos personales pueden ser vulnerados, generando riesgos de seguridad digital.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://www.europarl.europa.eu/resources/library/images/20191217PHT69214/20191217PHT69214-cl.jpg" alt="Noticias falsas">
+        <div class="card-content">
+          <h3>📰 Noticias Falsas</h3>
+          <p>La desinformación se propaga fácilmente y afecta la percepción de la realidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Botón regresar -->
+    <div style="text-align:center;">
+      <a href="(3)index.html" class="btn-back">⬅ Volver al inicio</a>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 - Sitio web educativo sobre Redes Sociales | Diseñado por [Tu Nombre]</p>
+  </footer>
+
+  <!-- Script Modo Oscuro -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Redes Sociales - Ventajas y Desventajas</title>
+  <style>
+    /* ====== ESTILOS GENERALES ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ====== ENCABEZADO ====== */
+    header {
+      background: linear-gradient(90deg, #1a73e8, #0a58ca);
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header .logo h1 {
+      font-size: 1.8em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #ffdd57;
+      color: #333;
+    }
+
+    /* Botón de modo oscuro */
+    .dark-btn {
+      background: #ffdd57;
+      color: #333;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    .dark-btn:hover {
+      background: #333;
+      color: #ffdd57;
+    }
+
+    /* ====== SECCIÓN PRINCIPAL ====== */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to right, #e3f2fd, #f4f6f9);
+      border-bottom: 2px solid #ddd;
+    }
+
+    .hero h2 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+      color: #1a73e8;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #1a73e8;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0a58ca;
+    }
+
+    /* ====== CARRUSEL ====== */
+    .carousel {
+      position: relative;
+      max-width: 900px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      display: block;
+      border-radius: 15px;
+    }
+
+    /* Texto dentro del carrusel */
+    .carousel-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+      color: white;
+      border-radius: 0 0 15px 15px;
+    }
+
+    .carousel-caption h3 {
+      font-size: 1.6em;
+      margin-bottom: 8px;
+    }
+
+    .carousel-caption p {
+      font-size: 1em;
+    }
+
+    /* Botones de control */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 50%;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    .prev { left: 15px; }
+    .next { right: 15px; }
+
+    /* Indicadores */
+    .carousel-indicators {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .indicator.active {
+      background: #ffdd57;
+    }
+
+    /* ====== PIE DE PÁGINA ====== */
+    footer {
+      background: #1a73e8;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ====== MODO OSCURO ====== */
+    body.dark {
+      background-color: #121212;
+      color: #eaeaea;
+    }
+
+    body.dark header {
+      background: #222;
+    }
+
+    body.dark .hero {
+      background: #1c1c1c;
+    }
+
+    body.dark footer {
+      background: #222;
+    }
+
+    body.dark .carousel-btn {
+      background: rgba(255,255,255,0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <h1>📱 Redes Sociales</h1>
+      <p>Ventajas y Desventajas</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="ventajas.html">Ventajas</a></li>
+        <li><a href="desventajas.html">Desventajas</a></li>
+      </ul>
+    </nav>
+    <button class="dark-btn" onclick="toggleDarkMode()">🌙 Modo oscuro</button>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="hero">
+      <h2>El impacto de las redes sociales en nuestra vida</h2>
+      <p>
+        Las redes sociales forman parte esencial de la sociedad moderna. 
+        Conectan personas, ideas y negocios, pero también plantean retos 
+        y riesgos importantes. En este sitio exploraremos sus <strong>ventajas</strong> 
+        y <strong>desventajas</strong>.
+      </p>
+      <a href="ventajas.html" class="btn">Explorar Ventajas</a>
+    </section>
+
+    <!-- Carrusel con texto -->
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="https://media.istockphoto.com/id/1488521147/es/foto/red-global-estados-unidos-estados-unidos-de-am%C3%A9rica-am%C3%A9rica-del-norte-negocios-globales-rutas.jpg?s=612x612&w=0&k=20&c=539BCqD5s6GJLLNSPzBC8U4J4KGRqLuW5tv2VERMIDw=" alt="Conexión global">
+          <div class="carousel-caption">
+            <h3>Conexión Global</h3>
+            <p>Las redes sociales eliminan fronteras, permitiendo la comunicación instantánea en cualquier parte del mundo.</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://universidadeuropea.com/resources/media/images/comunicacion_digital_og.original.jpg" alt="Comunicación digital">
+          <div class="carousel-caption">
+            <h3>Comunicación Digital</h3>
+            <p>Se han convertido en la principal vía de interacción entre personas, negocios y comunidades.</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://www.3dcadportal.com/images/stories/nctech/nctech3a.jpg" alt="Impacto social">
+          <div class="carousel-caption">
+            <h3>Impacto Social</h3>
+            <p>Influyen en la cultura, la política y la economía, siendo un motor de cambio y debate público.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+      <div class="carousel-indicators">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 - Sitio web educativo sobre Redes Sociales | Diseñado por [Tu Nombre]</p>
+  </footer>
+
+  <!-- Script Modo Oscuro y Carrusel -->
+  <script>
+    /* ====== MODO OSCURO ====== */
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+
+    /* ====== CARRUSEL ====== */
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      indicators.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel(currentIndex);
+    });
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel(currentIndex);
+    });
+
+    indicators.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        updateCarousel(currentIndex);
+      });
+    });
+
+    // Auto-play cada 6 segundos
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel(currentIndex);
+    }, 6000);
+  </script>
+</body>
+</html>

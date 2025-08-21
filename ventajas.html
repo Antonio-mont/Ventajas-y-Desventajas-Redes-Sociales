@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ventajas de las Redes Sociales</title>
+  <style>
+    /* ====== ESTILOS GENERALES ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ====== ENCABEZADO ====== */
+    header {
+      background: linear-gradient(90deg, #1a73e8, #0a58ca);
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header .logo h1 {
+      font-size: 1.8em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #ffdd57;
+      color: #333;
+    }
+
+    /* Botón de modo oscuro */
+    .dark-btn {
+      background: #ffdd57;
+      color: #333;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    .dark-btn:hover {
+      background: #333;
+      color: #ffdd57;
+    }
+
+    /* ====== HERO ====== */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to right, #e3f2fd, #f4f6f9);
+      border-bottom: 2px solid #ddd;
+    }
+
+    .hero h2 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+      color: #1a73e8;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    /* ====== TARJETAS ====== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 10px 18px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      color: #1a73e8;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      text-align: justify;
+    }
+
+    /* ====== BOTÓN REGRESAR ====== */
+    .btn-back {
+      display: inline-block;
+      margin: 30px auto;
+      text-decoration: none;
+      padding: 12px 25px;
+      background: #1a73e8;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .btn-back:hover {
+      background: #0a58ca;
+    }
+
+    /* ====== PIE DE PÁGINA ====== */
+    footer {
+      background: #1a73e8;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* ====== MODO OSCURO ====== */
+    body.dark {
+      background-color: #121212;
+      color: #eaeaea;
+    }
+
+    body.dark header {
+      background: #222;
+    }
+
+    body.dark .hero {
+      background: #1c1c1c;
+    }
+
+    body.dark footer {
+      background: #222;
+    }
+
+    body.dark .card {
+      background: #1e1e1e;
+      color: #eaeaea;
+    }
+
+    body.dark .card img {
+      filter: brightness(0.8);
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <h1>📱 Redes Sociales</h1>
+      <p>Ventajas</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="(3)index.html">Inicio</a></li>
+        <li><a href="ventajas.html" class="active">Ventajas</a></li>
+        <li><a href="desventajas.html">Desventajas</a></li>
+      </ul>
+    </nav>
+    <button class="dark-btn" onclick="toggleDarkMode()">🌙 Modo oscuro</button>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="hero">
+      <h2>Ventajas de las Redes Sociales</h2>
+      <p>
+        Las redes sociales ofrecen múltiples beneficios para la sociedad moderna. 
+        Desde la comunicación instantánea hasta el crecimiento profesional y la difusión de ideas, 
+        su impacto positivo es innegable.
+      </p>
+    </section>
+
+    <!-- Sección de Ventajas -->
+    <section class="cards">
+      <div class="card">
+        <img src="https://img.lovepik.com/bg/20240424/Exploring-the-Global-Business-Landscape-A-Fascinating-3D-Network-Connection_7235069_wh860.jpg!/fw/860" alt="Conexión global">
+        <div class="card-content">
+          <h3>🌍 Conexión Global</h3>
+          <p>Permiten interactuar con personas de todo el mundo en tiempo real, 
+          eliminando barreras de distancia y tiempo.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://static.tvn-2.com/clip/e43345a0-c3d1-47f8-8390-a3e849257598_16-9-aspect-ratio_default_0.webp" alt="Oportunidades profesionales">
+        <div class="card-content">
+          <h3>💼 Oportunidades Profesionales</h3>
+          <p>Facilitan la búsqueda de empleo, la creación de redes profesionales 
+          y la promoción de marcas personales.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://comunicacionymas.home.blog/wp-content/uploads/2019/10/difusion.jpg" alt="Difusión de información">
+        <div class="card-content">
+          <h3>📢 Difusión de Información</h3>
+          <p>Son una herramienta poderosa para difundir noticias, ideas y causas sociales 
+          en cuestión de segundos.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://www.iexe.edu.mx/wp-content/uploads/2021/11/IMG_0384.png" alt="Educación en línea">
+        <div class="card-content">
+          <h3>🎓 Educación y Aprendizaje</h3>
+          <p>Existen comunidades educativas, grupos de estudio y recursos compartidos 
+          que apoyan el aprendizaje colaborativo.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSroYgKv1KJknl8T4K3AqhofOrCoMhX9l1KNQ&s" alt="Apoyo y comunidad">
+        <div class="card-content">
+          <h3>🤝 Apoyo y Comunidad</h3>
+          <p>Ayudan a crear redes de apoyo emocional y social, 
+          conectando personas con intereses y experiencias comunes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Botón regresar -->
+    <div style="text-align:center;">
+      <a href="(3)index.html" class="btn-back">⬅ Volver al inicio</a>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 - Sitio web educativo sobre Redes Sociales | Diseñado por [Fabricio Monterroza]</p>
+  </footer>
+
+  <!-- Script Modo Oscuro -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>
